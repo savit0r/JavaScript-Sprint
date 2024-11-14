@@ -1,14 +1,39 @@
-Introduction to Data types
-In JavaScript and also other programming languages, there are different types of data types. The following are JavaScript primitive data types: String, Number, Boolean, undefined, Null, and Symbol.
 
-Numbers
-Integers: Integer (negative, zero and positive) numbers Example: ... -3, -2, -1, 0, 1, 2, 3 ...
-Float-point numbers: Decimal number Example ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
-Strings
-A collection of one or more characters between two single quotes, double quotes, or backticks.
+# Introduction to Data Types in JavaScript
+
+In JavaScript (and other programming languages), there are different types of data types. The following are JavaScript primitive data types:
+
+- **String**
+- **Number**
+- **Boolean**
+- **Undefined**
+- **Null**
+- **Symbol**
+
+## Numbers
+
+### Integers
+Whole numbers that can be negative, zero, or positive.
 
 Example:
+javascript
+-3, -2, -1, 0, 1, 2, 3
 
+
+### Floating-Point Numbers
+Decimal numbers.
+
+Example:
+```javascript
+-3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5
+```
+
+## Strings
+
+A collection of one or more characters enclosed within single quotes, double quotes, or backticks.
+
+Examples:
+```javascript
 'a'
 'Asabeneh'
 "Asabeneh"
@@ -19,61 +44,90 @@ Example:
 `We can also create a string using a backtick`
 'A string could be just as small as one character or as big as many pages'
 'Any data type under a single quote, double quote or backtick is a string'
-Booleans
-A boolean value is either True or False. Any comparisons returns a boolean value, which is either true or false.
+```
 
-A boolean data type is either a true or false value.
+## Booleans
+
+A boolean value represents either `true` or `false`. Any comparison returns a boolean value.
+
+Examples:
+```javascript
+true  // if the light is on
+false // if the light is off
+```
+
+## Undefined
+
+In JavaScript, if we don't assign a value to a variable, the value is `undefined`. If a function doesn’t return anything, it also returns `undefined`.
 
 Example:
+```javascript
+let firstName;
+console.log(firstName); // undefined
+```
 
-true // if the light is on, the value is true
-false // if the light is off, the value is false
-Undefined
-In JavaScript, if we don't assign a value to a variable, the value is undefined. In addition to that, if a function is not returning anything, it returns undefined.
+## Null
 
-let firstName
-console.log(firstName) // undefined, because it is not assigned to a value yet
-Null
-Null in JavaScript means an empty value.
+`Null` in JavaScript represents an empty or non-existent value.
 
-let emptyValue = null
-Checking Data Types
-To check the data type of a certain variable, we use the typeof operator. See the following example.
+Example:
+```javascript
+let emptyValue = null;
+```
 
-console.log(typeof 'Asabeneh') // string
-console.log(typeof 5) // number
-console.log(typeof true) // boolean
-console.log(typeof null) // object type
-console.log(typeof undefined) // undefined
-Comments Again
-Remember that commenting in JavaScript is similar to other programming languages. Comments are important in making your code more readable. There are two ways of commenting:
+## Checking Data Types
 
-Single line commenting
-Multiline commenting
-// commenting the code itself with a single comment
-// let firstName = 'Asabeneh'; single line comment
-// let lastName = 'Yetayeh'; single line comment
-Multiline commenting:
+To check the data type of a variable, use the `typeof` operator.
 
+Examples:
+```javascript
+console.log(typeof 'Asabeneh'); // string
+console.log(typeof 5);          // number
+console.log(typeof true);       // boolean
+console.log(typeof null);       // object
+console.log(typeof undefined);  // undefined
+```
+
+## Comments
+
+Comments make code more readable and maintainable. There are two types of comments in JavaScript:
+
+### Single-Line Comment
+```javascript
+// This is a single-line comment
+// let firstName = 'Asabeneh'; // single line comment
+// let lastName = 'Yetayeh'; // single line comment
+```
+
+### Multi-Line Comment
+```javascript
 /*
   let location = 'Helsinki';
   let age = 100;
   let isMarried = true;
-  This is a Multiple line comment
+  This is a multi-line comment
 */
-Variables
-Variables are containers of data. Variables are used to store data in a memory location. When a variable is declared, a memory location is reserved. When a variable is assigned to a value (data), the memory space will be filled with that data. To declare a variable, we use var, let, or const keywords.
+```
 
-For a variable that changes at a different time, we use let. If the data does not change at all, we use const. For example, PI, country name, gravity do not change, and we can use const. We will not use var in this challenge and I don't recommend you to use it. It is error prone way of declaring variable it has lots of leak. We will talk more about var, let, and const in detail in other sections (scope). For now, the above explanation is enough.
+## Variables
 
-A valid JavaScript variable name must follow the following rules:
+Variables are containers for data. They are used to store data in memory. When a variable is declared, memory is allocated to it. When it’s assigned a value, that memory space is filled with the data.
 
-A JavaScript variable name should not begin with a number.
-A JavaScript variable name does not allow special characters except dollar sign and underscore.
-A JavaScript variable name follows a camelCase convention.
-A JavaScript variable name should not have space between words.
-The following are examples of valid JavaScript variables.
+To declare a variable, use the `let`, `const`, or `var` keywords:
 
+- **let:** For variables that change over time.
+- **const:** For variables that are constant (e.g., PI, gravity).
+- **var:** Not recommended due to potential scope issues.
+
+### Variable Naming Rules
+
+1. Should not start with a number.
+2. Allows `$` and `_` as special characters.
+3. Uses camelCase for naming variables.
+4. Should not contain spaces.
+
+Examples of valid variables:
+```javascript
 firstName
 lastName
 country
@@ -81,7 +135,10 @@ city
 capitalCity
 age
 isMarried
+```
 
+Examples of camelCase variable names:
+```javascript
 first_name
 last_name
 is_married
@@ -93,68 +150,68 @@ _num_1
 $num1
 year2020
 year_2020
-The first and second variables on the list follows the camelCase convention of declaring in JavaScript. In this material, we will use camelCase variables(camelWithOneHump). We use CamelCase(CamelWithTwoHump) to declare classes, we will discuss about classes and objects in other section.
+```
 
-Example of invalid variables:
+### Invalid Variables
 
-  first-name
-  1_num
-  num_#_1
-Let us declare variables with different data types. To declare a variable, we need to use let or const keyword before the variable name. Following the variable name, we write an equal sign (assignment operator), and a value(assigned data).
+Examples of invalid variable names:
+```javascript
+first-name
+1_num
+num_#_1
+```
 
-// Syntax
-let nameOfVariable = value
-The nameOfVriable is the name that stores different data of value. See below for detail examples.
+### Declaring Variables with Different Data Types
 
-Examples of declared variables
+Examples:
+```javascript
+let firstName = 'Asabeneh'; // first name of a person
+let lastName = 'Yetayeh';   // last name of a person
+let country = 'Finland';    // country
+let city = 'Helsinki';      // capital city
+let age = 100;              // age in years
+let isMarried = true;
 
-// Declaring different variables of different data types
-let firstName = 'Asabeneh' // first name of a person
-let lastName = 'Yetayeh' // last name of a person
-let country = 'Finland' // country
-let city = 'Helsinki' // capital city
-let age = 100 // age in years
-let isMarried = true
+console.log(firstName, lastName, country, city, age, isMarried); // Asabeneh Yetayeh Finland Helsinki 100 true
+```
 
-console.log(firstName, lastName, country, city, age, isMarried)
-Asabeneh Yetayeh Finland Helsinki 100 true
-// Declaring variables with number values
-let age = 100 // age in years
-const gravity = 9.81 // earth gravity  in m/s2
-const boilingPoint = 100 // water boiling point, temperature in °C
-const PI = 3.14 // geometrical constant
-console.log(gravity, boilingPoint, PI)
-9.81 100 3.14
-// Variables can also be declaring in one line separated by comma, however I recommend to use a seperate line to make code more readble
-let name = 'Asabeneh', job = 'teacher', live = 'Finland'
-console.log(name, job, live)
-Asabeneh teacher Finland
-When you run index.html file in the 01-Day folder you should get this:
+Declaring variables with number values:
+```javascript
+const gravity = 9.81;      // earth gravity in m/s²
+const boilingPoint = 100;  // water boiling point in °C
+const PI = 3.14;           // geometrical constant
 
-Day one
+console.log(gravity, boilingPoint, PI); // 9.81 100 3.14
+```
 
-🌕 You are amazing! You have just completed day 1 challenge and you are on your way to greatness. Now do some exercises for your brain and muscle.
+Declaring multiple variables in one line:
+```javascript
+let name = 'Asabeneh', job = 'teacher', live = 'Finland';
+console.log(name, job, live); // Asabeneh teacher Finland
+```
 
-💻 Day 1: Exercises
-Write a single line comment which says, comments can make code readable
+## Day 1 Exercise
 
-Write another single comment which says, Welcome to 30DaysOfJavaScript
+### 💻 Day 1: Exercises
 
-Write a multiline comment which says, comments can make code readable, easy to reuse and informative
+1. Write a single-line comment that says, "comments can make code readable."
+2. Write another single-line comment that says, "Welcome to 30DaysOfJavaScript."
+3. Write a multi-line comment that says, "comments can make code readable, easy to reuse and informative."
+4. Create a `variable.js` file and declare variables, assigning string, boolean, undefined, and null data types.
+5. Create a `datatypes.js` file and use the JavaScript `typeof` operator to check different data types.
+6. Declare four variables without assigning values.
+7. Declare four variables with assigned values.
+8. Declare variables to store your first name, last name, marital status, country, and age (both in multiple lines and a single line).
+9. Declare two variables `myAge` and `yourAge`, assign initial values, and log to the console:
+   - Example output:
+     ```
+     I am 25 years old.
+     You are 30 years old.
+     ```
 
-Create a variable.js file and declare variables and assign string, boolean, undefined and null data types
+---
 
-Create datatypes.js file and use the JavaScript typeof operator to check different data types. Check the data type of each variable
+🌕 **You are amazing!** You have just completed Day 1 of the challenge and are on your way to greatness. Keep going and build up your skills step-by-step!
+```
 
-Declare four variables without assigning values
-
-Declare four variables with assigned values
-
-Declare variables to store your first name, last name, marital status, country and age in multiple lines
-
-Declare variables to store your first name, last name, marital status, country and age in a single line
-
-Declare two variables myAge and yourAge and assign them initial values and log to the browser console.
-
-I am 25 years old.
-You are 30 years old.
+This README.md file now includes all sections from your text with headings, code blocks, and structured formatting. Let me know if there’s anything more you’d like added!
