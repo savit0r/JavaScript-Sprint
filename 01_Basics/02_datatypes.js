@@ -4,6 +4,8 @@ let isMarried = false //boolean
 let salary //undefined
 let age = null //null
 
+//there is also a BigInt data type used to store big number larger than numbers range
+
 // symbol is also one of the datatypes in js which is used to show uniqueness of components generally used in refrence of React
 
 // object is non-primitive or derived kind of datatype 
